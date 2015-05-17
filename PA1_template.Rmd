@@ -7,7 +7,7 @@ output:
 
 
 ## Loading and preprocessing the data
-Using the activities.csv file found with our course, we'll load the data into a variable.
+Using the activities.csv file found with our course, we'll load the data into a variable called 'data'.
 
 The variables included in this dataset are:
 
@@ -20,9 +20,26 @@ data = read.csv('activity.csv', header = T)
 names(data)
 ```
 
+Lets see what is in this dataset by using str
+
+```{r}
+str(data)
+
+head(data)
+```
+
 
 ## What is mean total number of steps taken per day?
 
+Building a histogram of total number of steps taken each day. 
+
+Using the aggregate function we'll ready the data for the histagram. Then we will produce the histogram.
+
+1. Histogram
+```{r}
+step_date <- aggregate(steps ~ date, data = data, FUN = sum,)
+barplot(step_date$steps, names.arg = step_date$date, xlab = "date", ylab = "steps")
+```
 
 
 ## What is the average daily activity pattern?
