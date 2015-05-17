@@ -1,9 +1,4 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
 
 
 ## Loading and preprocessing the data
@@ -15,10 +10,10 @@ The variables included in this dataset are:
 2. date: The date on which the measurement was taken in YYYY-MM-DD format
 3. interval: Identifier for the 5-minute interval in which measurement was taken
 
-```{r}
+'''{r}
 data = read.csv('activity.csv', header = T)
 names(data)
-```
+'''
 
 
 ## What is mean total number of steps taken per day?
